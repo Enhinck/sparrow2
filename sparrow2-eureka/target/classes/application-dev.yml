@@ -1,0 +1,17 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false  #false:不作为一个客户端注册到注册中心
+    fetch-registry: false        #为true时，可以启动，但报异常：Cannot execute request on any known server
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+#安全配置
+spring:
+  security:
+    user:
+      name: sparrow
+      password: 123456
+      
+   
